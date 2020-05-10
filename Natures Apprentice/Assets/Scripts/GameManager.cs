@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         audioGameSource = GetComponent<AudioSource>();
 
         selectRandomQuest();
+        
     }
 
     public void selectRandomQuest()
