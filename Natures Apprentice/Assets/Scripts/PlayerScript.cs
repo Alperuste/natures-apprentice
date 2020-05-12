@@ -12,17 +12,39 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     bool moveRight = true;
 
+    [SerializeField]
+    bool talkWithMentor = false;
+    [SerializeField]
+    bool collectObject = false;
+    GameObject touchingObject;
+
+    QuestManager qM;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
         characterSprite = this.GetComponent<SpriteRenderer>();
+        qM = this.gameObject.GetComponent<QuestManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Interact();
+        }
+    }
+
+    void Interact()
+    {
+        if (talkWithMentor == true || collectObject == true)
+        {
+            qM.NextQuest();
+        }
     }
 
     void Move()
@@ -55,6 +77,18 @@ public class PlayerScript : MonoBehaviour
         {
             moveRight = false;
         }
+
+
+        if (collision.gameObject.tag == "Collectible")
+        {
+            collectObject = true;
+            //touchingObject = collision.gameObject;
+        }
+        if (collision.gameObject.tag == "Mentor")
+        {
+            talkWithMentor = true;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -67,5 +101,37 @@ public class PlayerScript : MonoBehaviour
         {
             moveRight = true;
         }
+
+
+        if (collision.gameObject.tag == "Collectible")
+        {
+            collectObject = false;
+            //touchingObject = null;
+        }
+        if (collision.gameObject.tag == "Mentor")
+        {
+            talkWithMentor = false;
+        }
     }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Collectible")
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.F))
+    //        {
+    //            //Destroy(collision.gameObject);
+    //            qM.NextQuest();
+    //        }
+    //    }
+    //    if (collision.gameObject.tag == "Mentor")
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.F))
+    //        {
+    //            // Make Talking
+    //            qM.NextQuest();
+    //        }
+    //    }
+    //}
+
 }
