@@ -41,8 +41,14 @@ public class PlayerScript : MonoBehaviour
 
     void Interact()
     {
-        if (talkWithMentor == true || collectObject == true)
+        if (collectObject == true)
         {
+            qM.openFindIt();
+            qM.NextQuest();
+        }
+        else if (talkWithMentor == true)
+        {
+            qM.openDialog();
             qM.NextQuest();
         }
     }
@@ -55,15 +61,11 @@ public class PlayerScript : MonoBehaviour
         {
             characterSprite.flipX = true;
             this.transform.position = new Vector2(this.transform.position.x - 0.05f, this.transform.position.y);
-            //rb.AddForce(Vector2.left * 2);
         }
         if (Input.GetKey(KeyCode.D) && moveRight == true)
         {
-            //rb.AddForce(Vector2.right * Time.deltaTime);
             characterSprite.flipX = false;
             this.transform.position = new Vector2(this.transform.position.x + 0.05f, this.transform.position.y);
-
-            //rb.AddForce(Vector2.right * 2);
         }
     }
 
@@ -82,7 +84,6 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Collectible")
         {
             collectObject = true;
-            //touchingObject = collision.gameObject;
         }
         if (collision.gameObject.tag == "Mentor")
         {
@@ -106,32 +107,10 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Collectible")
         {
             collectObject = false;
-            //touchingObject = null;
         }
         if (collision.gameObject.tag == "Mentor")
         {
             talkWithMentor = false;
         }
     }
-
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Collectible")
-    //    {
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            //Destroy(collision.gameObject);
-    //            qM.NextQuest();
-    //        }
-    //    }
-    //    if (collision.gameObject.tag == "Mentor")
-    //    {
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            // Make Talking
-    //            qM.NextQuest();
-    //        }
-    //    }
-    //}
-
 }

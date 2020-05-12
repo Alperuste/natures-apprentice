@@ -21,4 +21,9 @@ public class CreditsScript : MonoBehaviour
 	{
         SceneManager.LoadScene("MainMenu");
 	}
+
+    public void QuitTheGame()
+    {
+        Application.Quit();
+    }
 }
