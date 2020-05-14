@@ -52,4 +52,9 @@ public class GameplayScreenScript : MonoBehaviour
     {
         panelBerryBook.active = false;
     }
+
+    public void OpenMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
