@@ -28,8 +28,6 @@ public class QuestManager : MonoBehaviour
     public GameObject questObject2;
     public GameObject questObject3;
     public GameObject questObject4;
-    public GameObject questObject5;
-    public GameObject questObject6;
 
 
     [HideInInspector]
