@@ -5,12 +5,14 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     AudioSource audioSrc;
+    PlayerScript ps;
 
     float musicVolume = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
+        ps = GetComponent<PlayerScript>();
         audioSrc = GetComponent<AudioSource>();
     }
 

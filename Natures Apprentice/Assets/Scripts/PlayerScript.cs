@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
 
     QuestManager qM;
 
+    public bool isMoving = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,12 +62,19 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.A) && moveLeft == true)
         {
             characterSprite.flipX = true;
+            isMoving = true;
             this.transform.position = new Vector2(this.transform.position.x - 0.05f, this.transform.position.y);
+
         }
-        if (Input.GetKey(KeyCode.D) && moveRight == true)
+        else if (Input.GetKey(KeyCode.D) && moveRight == true)
         {
             characterSprite.flipX = false;
+            isMoving = true;
             this.transform.position = new Vector2(this.transform.position.x + 0.05f, this.transform.position.y);
+        }
+        else if(true)
+        {
+            isMoving = false;
         }
     }
 
