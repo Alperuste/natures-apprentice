@@ -7223,6 +7223,7 @@ MonoBehaviour:
   panelTutorial: {fileID: 1923343480}
   panelFirstDialog: {fileID: 1197070512}
   txtFirstDialog: {fileID: 1260198806}
+  playerScript: {fileID: 1375011124}
 --- !u!1 &1202777386
 GameObject:
   m_ObjectHideFlags: 0
@@ -7928,6 +7929,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 747538456867631255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1375011124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4185062072432637718, guid: 3580df2e28b7d4b438983185401dbfcb,
+    type: 3}
+  m_PrefabInstance: {fileID: 747538456867631255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375011121}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48174dfe47c7f4df2b4a7f353cd471d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1375011126
 Rigidbody2D:
   serializedVersion: 4
@@ -14991,6 +15004,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4185062072432637718, guid: 3580df2e28b7d4b438983185401dbfcb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 747538457655308708, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}
       propertyPath: m_LocalPosition.x

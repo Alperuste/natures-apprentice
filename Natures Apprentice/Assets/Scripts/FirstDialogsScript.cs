@@ -11,13 +11,14 @@ public class FirstDialogsScript : MonoBehaviour
     GameObject panelFirstDialog;
     [SerializeField]
     Text txtFirstDialog;
+    [SerializeField]
+    PlayerScript playerScript;
 
     int dialog = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -109,7 +110,7 @@ public class FirstDialogsScript : MonoBehaviour
         else if (dialog == 19)
         {
             panelTutorial.active = true;
-            Time.timeScale = 1.00f;
+            playerScript.enabled = true;
             panelFirstDialog.active = false;
         }
     }
