@@ -67,19 +67,19 @@ public class QuestManager : MonoBehaviour
         findItPanel.active = true;
         if (activeQuest == 1)
         {
-            findItText.text = "I find it!";
+            findItText.text = "I found it!";
         }
         if (activeQuest == 3)
         {
-            findItText.text = "I find it!";
+            findItText.text = "I found it!";
         }
         if (activeQuest == 5)
         {
-            findItText.text = "I find it!";
+            findItText.text = "I found it!";
         }
         if (activeQuest == 7)
         {
-            findItText.text = "I find it!";
+            findItText.text = "I found it!";
         }
         Invoke("closefindIt",1f);
     }

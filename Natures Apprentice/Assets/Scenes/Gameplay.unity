@@ -7573,7 +7573,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Jaak] Who goes there?'
+  m_Text: '[Jaak] Ah, young Rasmus! Finally come to train as a herbalist, like your
+    father was?'
 --- !u!222 &1260198807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15012,7 +15013,7 @@ PrefabInstance:
     - target: {fileID: 747538457655308708, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58
+      value: 74.58
       objectReference: {fileID: 0}
     - target: {fileID: 747538457655308708, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}
