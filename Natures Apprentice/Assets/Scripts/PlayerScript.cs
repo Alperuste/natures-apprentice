@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     Rigidbody2D rb;
     SpriteRenderer characterSprite;
+    private Animator animator;
 
     [SerializeField]
     bool moveLeft = true;
@@ -28,6 +29,9 @@ public class PlayerScript : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         characterSprite = this.GetComponent<SpriteRenderer>();
         qM = this.gameObject.GetComponent<QuestManager>();
+
+        animator = this.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -63,6 +67,9 @@ public class PlayerScript : MonoBehaviour
         {
             characterSprite.flipX = true;
             isMoving = true;
+            animator.SetBool("isMoving", true);
+            Debug.Log(transform.localScale.x);
+
             this.transform.position = new Vector2(this.transform.position.x - 0.05f, this.transform.position.y);
 
         }
@@ -70,11 +77,15 @@ public class PlayerScript : MonoBehaviour
         {
             characterSprite.flipX = false;
             isMoving = true;
+            animator.SetBool("isMoving", true);
+
             this.transform.position = new Vector2(this.transform.position.x + 0.05f, this.transform.position.y);
         }
         else if(true)
         {
             isMoving = false;
+            animator.SetBool("isMoving", false);
+
         }
     }
 
