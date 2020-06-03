@@ -8,6 +8,7 @@ public class FootstepsScript : MonoBehaviour
     PlayerScript ps;
     [SerializeField]
     AudioSource asWalk;
+    
     // Start is called before the first frame update
     void Start()
     {
