@@ -109,9 +109,12 @@ public class FirstDialogsScript : MonoBehaviour
         // }
         else if (dialog == 3)
         {
-            panelTutorial.active = true;
-            playerScript.enabled = true;
+            //panelTutorial.active = true;
+            //playerScript.enabled = true;
             panelFirstDialog.active = false;
+
+            FindObjectOfType<PlayerScript>().isFirstDialogDone = true;
+            print("First Dialog Done");
         }
     }
 

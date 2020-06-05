@@ -7150,7 +7150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1197070513
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7937,7 +7937,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 747538456867631255}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375011121}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48174dfe47c7f4df2b4a7f353cd471d9, type: 3}
   m_Name: 
@@ -13703,7 +13703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1923343481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15027,7 +15027,7 @@ PrefabInstance:
     - target: {fileID: -4185062072432637718, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4185062072432637718, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}
@@ -15039,10 +15039,15 @@ PrefabInstance:
       propertyPath: collectObject
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4185062072432637718, guid: 3580df2e28b7d4b438983185401dbfcb,
+        type: 3}
+      propertyPath: panelFirstDialog
+      value: 
+      objectReference: {fileID: 1197070512}
     - target: {fileID: 747538457655308708, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58
+      value: 104.55
       objectReference: {fileID: 0}
     - target: {fileID: 747538457655308708, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}
@@ -15113,7 +15118,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: dd9502566233645449b94428de18a3f1,
+      objectReference: {fileID: 21300000, guid: 492e6b4ddd2c749eba7d1e30c21c5c98,
         type: 3}
     - target: {fileID: 747538457655308710, guid: 3580df2e28b7d4b438983185401dbfcb,
         type: 3}

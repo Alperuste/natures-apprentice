@@ -23,6 +23,10 @@ public class PlayerScript : MonoBehaviour
 
     public bool isMoving = false;
 
+    public bool isFirstDialogDone = false;
+
+    public GameObject panelFirstDialog;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -107,7 +111,15 @@ public class PlayerScript : MonoBehaviour
         }
         if (collision.gameObject.tag == "Mentor")
         {
-            talkWithMentor = true;
+            if (isFirstDialogDone == true)
+            {
+                talkWithMentor = true;
+            }
+            else if(isFirstDialogDone == false)
+            {
+                panelFirstDialog.active = true;
+                print("First dialog panel active");
+            }
         }
 
     }
